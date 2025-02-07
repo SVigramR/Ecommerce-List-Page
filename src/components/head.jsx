@@ -5,7 +5,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FilterSection from "./Filter"; 
 
-function HeadSection({ cart }) {
+function HeadSection({ cart, filters, setFilters, categories }) {
     const [active, setActive] = useState(false);
     const navigate = useNavigate();
 
@@ -33,7 +33,7 @@ function HeadSection({ cart }) {
                         </div>
                     </div>
                     <div className={headStyle.filterSection}>
-                        <FilterSection />
+                        <FilterSection filters={filters} setFilters={setFilters} categories={categories} />
                     </div>
                 </div>
 

@@ -164,10 +164,11 @@
     .nav {
         visibility: hidden;
         position: absolute;
+        display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 1rem;
+        gap: 3rem;
         top: 97px;
         left: -100%;
         text-align: center;
@@ -180,7 +181,6 @@
         padding: 2rem 3rem;
         z-index: 3;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-
     }
     
     .nav.active {
@@ -272,6 +272,7 @@
         min-width: 100%;
         background: #ffffff;
         border-radius: 8px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     }
 }
 
