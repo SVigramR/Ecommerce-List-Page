@@ -7,7 +7,6 @@ function FilterSection({ setFilters, categories = [] }) {
     const [maxPrice, setMaxPrice] = useState("");
     const [sortOption, setSortOption] = useState("");
 
-    // ✅ Ensure `setFilters` exists before calling it
     useEffect(() => {
         if (typeof setFilters === "function") {
             setFilters({

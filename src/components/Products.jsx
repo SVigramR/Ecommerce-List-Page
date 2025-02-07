@@ -50,22 +50,20 @@ function Products() {
 
     // Handle page click with animation
     const handlePageClick = ({ selected }) => {
-        setFadeOut(true); // Start fade-out
+        setFadeOut(true);
         setTimeout(() => {
             setCurrentPage(selected);
-            setFadeOut(false); // Start fade-in
-        }, 300); // Match CSS animation timing
+            setFadeOut(false);
+        }, 300); 
     };
 
     return (
         <div className={product.holder}>
-            {/* Filter Section */}
+
             <div className={product.filterSection}>
                 <FilterSection filters={filters} setFilters={setFilters} categories={categories} />
             </div>
 
-            {/* <div className={product.productPageHolder}> */}
-            {/* Product Grid */}
             <div className={product.productPageHolder}>
                 <div className={product.productGrid}>
                 {currentItems.map((item, index) => (
@@ -86,8 +84,6 @@ function Products() {
                     disabledClassName={product.disabledPage}
                 />
             </div>
-            {/* Pagination */}
-            {/* </div> */}
 
             <ToastContainer />
         </div>
