@@ -1,10 +1,9 @@
 import headStyle from "../styles/header.module.css";
-import productStyle from "../styles/products.module.css";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import FilterSection from "./Filter";  // Import FilterSection
+import FilterSection from "./Filter"; 
 
 function HeadSection({ cart }) {
     const [active, setActive] = useState(false);
