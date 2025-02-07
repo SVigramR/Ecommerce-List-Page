@@ -5,6 +5,7 @@ import Card from "./Card";
 import { useOutletContext } from "react-router-dom";
 import FilterSection from "./Filter";
 import ReactPaginate from "react-paginate";
+import { ToastContainer } from "react-toastify";
 
 function Products({ categoryURL }) {
     const { data, error, loading } = useProductsURL(categoryURL);
@@ -46,11 +47,10 @@ function Products({ categoryURL }) {
                 {currentItems.map((item, index) => (
                     <Card key={index} item={item} direction={true} cart={cart} setCart={setCart} fadeOut={fadeOut} />
                 ))}
-
                 {/* Pagination */}
                 <ReactPaginate
-                    previousLabel="< Previous"
-                    nextLabel="Next >"
+                    previousLabel="<"
+                    nextLabel=">"
                     breakLabel="..."
                     pageCount={pageCount}
                     marginPagesDisplayed={2}
@@ -61,6 +61,7 @@ function Products({ categoryURL }) {
                     disabledClassName={product.disabledPage}
                 />
             </div>
+            <ToastContainer />
         </div>
     );
 }

@@ -38,7 +38,7 @@ function Cart() {
                             )
                         })}
                     </div>
-                    <div>${sumTotal()}</div>
+                    <div className={cartStyle.sumTotal}>${sumTotal()}</div>
                     <button className={cartStyle.payout} onClick={handlePurchase}>PAYOUT</button>
                 </div>
             </>

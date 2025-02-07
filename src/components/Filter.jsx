@@ -3,7 +3,7 @@ function FilterSection() {
     return (
         <>
             <div className={filterStyle.filterContainer}>
-                Filter & Sort
+                Filter
             </div>
         </>
     )

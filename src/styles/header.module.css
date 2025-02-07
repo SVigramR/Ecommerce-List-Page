@@ -3,38 +3,45 @@
     width: 100%;
     height: fit-content;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.336);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4rem;
-    z-index: 1;
+    z-index: 4;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 2rem auto;
     gap: 2rem;
+    position: fixed;
 }
 
 .headerTitle {
     width: fit-content;
     z-index: 1;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.589);
+    color: rgb(228, 164, 46);
+    text-shadow: 5px 5px 10px rgba(255, 174, 53, 0.589);
 }
 
 .cartNav {
     font-size: 2rem;
-    margin-right: 4rem;
+    /* margin-right: 4rem; */
     transition: .8s;
 }
 
 .cartNav:hover {
     transform: scale(1.1);
+    background-color: white;
 }
 
 .cartNav:active {
     transform: scale(0.9);
+    background-color: white;
 }
 
 .cartIcon {
     font-size: 2rem;
+    color: black;
+    background-color: white;
 }
 
 .cartButton {
@@ -46,12 +53,13 @@
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
+    background-color: white;
 }
 
 .cardCounter {
     /* background-color: white; */
-    background-color: black;
-    color: whitesmoke;
+    background-color: orange;
+    color: white;
     border-radius: 50%;
     font-size: 1rem;
     font-weight: 900;
@@ -110,12 +118,17 @@
 }
 
 .filterSection {
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
+    background: #ffffff;
+    border-radius: 1rem;
     max-width: 250px;
     /* flex: 1; Allows it to shrink but not disappear */
     display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -132,7 +145,7 @@
         width: 20px;
         height: 3px;
         display: block;
-        background-color: #ffffff;
+        background-color: black;
         margin: 5px;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
@@ -163,8 +176,10 @@
         min-height: 100vh;
         max-height: none;
         transition: 0.7s ease-in-out;
-        background-color: #242933;
+        background-color: #ffffff;
         padding: 2rem 3rem;
+        z-index: 3;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 
     }
     
@@ -174,44 +189,59 @@
     }
 
     .nav .ul {
-        flex-direction: column;
+        display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
-        height: 15vh;
     }
 
-    .links {
-        font-size: 2rem;
-        padding: 0;
-        border-radius: 0;
-        background-color: #242933;
-    }   
-
-    .links:hover {
-        background-color: #242933;
-        color: #a7a3a3;
-        transform: scale(1);
-    }
-
-    .links:active {
-        background-color: #242933;
-        transform: scale(0.9);
-    }
     .headLi {
-        background-color: #242933;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: black;
         font-size: 2rem;
+        padding: 1rem;
+        border-radius: 4rem;
+        transition: .8s;
+        width: 100%;
+        height: fit-content;
     }
     
     .headLi:hover {
-        transform: scale(1);
-        background-color: #242933;
+        transform: scale(1.1);
+        background-color: black;
     }
     
     .headLi:active {
-        background-color: #242933;
+        background-color: rgb(90, 90, 90);
         transform: scale(0.9);
+        transition: ease-in-out 0.4s;
     }
+    
+    .links {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: black;
+        /* padding: 1rem; */
+        font-size: 2rem;
+        font-weight: 800;
+        border-radius: 1rem;
+        transition: .8s;
+        list-style: none;
+    }
+    
+    .links:hover {
+        transform: scale(1.1);
+        background-color: black;
+        color: white;
+    }
+    
+    .links:active {
+        background-color: rgb(90, 90, 90);
+        transform: scale(0.9);
+        transition: ease-in-out 0.4s;
+        color: white;
+    }
+    
 
     .logo {
         font-size: 1rem;
@@ -240,13 +270,12 @@
     .nav.active .filterSection {
         display: block;
         min-width: 100%;
-        background: #f9f9f9;
-        padding: 1rem;
+        background: #ffffff;
         border-radius: 8px;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 780px) and (max-width: 1200px) {
     .headContent {
         max-width: 900px;
         transition: ease-in-out 0.2s;

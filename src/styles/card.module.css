@@ -8,8 +8,9 @@
     border-radius: 2rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    z-index: 2;
 }
 
 .cardHorizontal {
@@ -57,11 +58,6 @@ p {
     opacity: 0;
     transition: ease-out 0.5s;
 }
-/* 
-.fadeIn {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-} */
 
 /* Image Animation */
 .fadeIn {

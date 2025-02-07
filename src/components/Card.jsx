@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import card from "/src/styles/card.module.css";
 import Quantity from "./Quantity";
+import { toast, ToastContainer } from "react-toastify";
 
 function Card({ item, direction, cart, setCart, fadeOut }) {
     const [loaded, setLoaded] = useState(false);
@@ -29,6 +30,7 @@ function Card({ item, direction, cart, setCart, fadeOut }) {
         if (!findItem) {
             setCart([...cart, newCart]);
         }
+        toast.success("Added To Cart, Sucessfully!")
     };
 
     return (
