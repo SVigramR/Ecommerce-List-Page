@@ -1,0 +1,10 @@
+.foot {
+    background-color: rgba(255, 255, 255, 0.336);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+}
+
+.githubLink, .githubLink:hover {
+    color: orange;
+}

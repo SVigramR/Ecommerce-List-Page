@@ -34,7 +34,7 @@ function Card({ item, direction, cart, setCart, fadeOut }) {
     return (
         <div className={direction ? card.card : card.cardHorizontal}>
             <img
-                src={item.images[0]}
+                src={Array.isArray(item.images) ? item.images[0] : item.images}
                 alt={item.title}
                 onLoad={() => setLoaded(true)}
                 className={`${loaded ? card.fadeIn : card.fadeOut}`}
