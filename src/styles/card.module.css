@@ -76,3 +76,9 @@ p {
 .hidden {
     opacity: 0;
 }
+
+/* @media screen and (max-width: 600px) {
+    .card {
+        width: 200px;
+    }
+} */

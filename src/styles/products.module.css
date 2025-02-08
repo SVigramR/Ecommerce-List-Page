@@ -5,7 +5,7 @@
     max-width: 1500px; /* Full width */
     padding: 2rem;
     margin-top: 10rem;
-    flex: 1;
+    flex: 2;
 }
 
 /* Filter Sidebar */
@@ -119,5 +119,35 @@
 @media screen and (max-width: 780px) {
     .filterSection {
         display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .holder {
+        gap: 0;
+        padding: 0;
+        /* margin: 0; */
+        /* justify-content: center; */
+    }
+
+    /* .productGrid {
+        flex: 1;
+        
+    } */
+}
+
+@media screen and (max-width: 700px) {
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .pagination li {
+        padding: 6px 10px; /* Reduce size for small screens */
+        font-size: 14px; /* Make text smaller */
     }
 }
