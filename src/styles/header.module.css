@@ -270,7 +270,7 @@
 
     .nav.active .filterSection {
         display: block;
-        min-width: 100%;
+        min-width: 300px;
         background: #ffffff;
         border-radius: 8px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -295,5 +295,13 @@
 @media screen and (max-width: 580px) {
     .headerTitle {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav {
+        width: auto;
+        min-width: 100%;
+        padding: 2rem 1rem;
     }
 }
