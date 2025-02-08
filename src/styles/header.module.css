@@ -31,18 +31,18 @@
 
 .cartNav:hover {
     transform: scale(1.1);
-    background-color: white;
+    background-color: transparent;
 }
 
 .cartNav:active {
     transform: scale(0.9);
-    background-color: white;
+    background-color: transparent;
 }
 
 .cartIcon {
     font-size: 2rem;
     color: black;
-    background-color: white;
+    background-color: transparent;
 }
 
 .cartButton {
@@ -54,7 +54,7 @@
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
 }
 
 .cardCounter {
